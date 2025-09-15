@@ -1,4 +1,4 @@
-# UI - Compresor/Convertidor de imágenes HEIC/JPG/PNG - Utilizando ImageMagick
+# GUI - Compresor/Convertidor de imágenes HEIC/JPG/PNG - Utilizando ImageMagick
 ## Diseñado para MacOS, con soporte para Linux y Windows 
 
 ### ¿Cómo ejecutarlo?
