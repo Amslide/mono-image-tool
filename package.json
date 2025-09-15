@@ -1,0 +1,15 @@
+{
+  "name": "mono-image-tool",
+  "version": "1.0.0",
+  "description": "Compresión WebP y conversión HEIC/JPG/PNG en una sola app (ImageMagick + Node + UI)",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js"
+  },
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}

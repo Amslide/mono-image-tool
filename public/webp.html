@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <title>Compresión a WebP</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <a class="back" href="/">&larr; Volver al menú</a>
+      <h1>Compresión a WebP</h1>
+      <p class="muted">Arrastra o selecciona imágenes. Usa <b>ImageMagick</b> por detrás.</p>
+
+      <form id="convert-form">
+        <div id="dropzone" class="dropzone">
+          <input id="file-input" type="file" name="images" accept="image/*,.heic,.heif,.avif" multiple />
+          <span>Arrastra imágenes aquí o haz clic para seleccionarlas</span>
+        </div>
+
+        <div id="file-list" class="file-list" hidden>
+          <div class="file-list__header">
+            <b>Archivos seleccionados</b>
+            <small id="file-list-summary"></small>
+          </div>
+          <ul id="file-list-items"></ul>
+        </div>
+
+        <div class="options">
+          <div class="field">
+            <label for="quality">Calidad (lossy)</label>
+            <input id="quality" type="range" min="0" max="100" value="82" />
+            <output id="quality-val">82</output>
+          </div>
+
+          <div class="row">
+            <label><input id="lossless" type="checkbox" /> Lossless (sin pérdida)</label>
+          </div>
+
+          <div class="field">
+            <label for="resize">Resize (opcional)</label>
+            <input id="resize" type="text" placeholder="Ej: 1600x o 1600x1200" />
+          </div>
+
+          <div class="row">
+            <label><input id="zip" type="checkbox" /> Descargar como .zip</label>
+          </div>
+
+          <button type="submit" class="btn">Convertir</button>
+        </div>
+      </form>
+
+      <div id="progress" class="progress" hidden>
+        <div class="progress-row">
+          <progress id="progress-bar" max="100" value="0"></progress>
+          <span id="progress-label">Preparando…</span>
+        </div>
+      </div>
+
+      <div id="results" class="results"></div>
+    </main>
+
+    <script src="webp.js"></script>
+  </body>
+</html>
